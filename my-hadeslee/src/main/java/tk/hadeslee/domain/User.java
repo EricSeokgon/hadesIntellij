@@ -1,4 +1,4 @@
-package tk.hadeslee.web;
+package tk.hadeslee.domain;
 
 /**
  * Project: hadesIntellij
@@ -9,7 +9,19 @@ package tk.hadeslee.web;
  * Note:
  * To change this template use File | Settings | File Templates.
  */
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(nullable = false)
     private String userId;
     private String password;
     private String name;
